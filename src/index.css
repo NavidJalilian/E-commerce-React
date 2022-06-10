@@ -1,0 +1,145 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  display: block;
+  color: inherit;
+  text-transform: capitalize;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+}
+a:hover {
+  color: black;
+}
+img {
+  display: block;
+  width: 100%;
+}
+ul {
+  list-style: none;
+}
+
+input {
+  display: block;
+  background: none;
+  border: none;
+  outline: none;
+  width: 100%;
+}
+
+button {
+  background: none;
+  border: none;
+  outline: none;
+}
+.btn {
+  height: 50px;
+  letter-spacing: 0.5px;
+  line-height: 50px;
+  padding: 0 1em 0;
+  font-size: 1rem;
+  background-color: black;
+  color: white;
+  text-transform: capitalize;
+  font-family: inherit;
+  font-weight: bolder;
+  border: none;
+  cursor: pointer;
+  aspect-ratio: 3;
+}
+.btn:hover {
+  background-color: white;
+  color: black;
+  outline: 1px solid black;
+}
+
+.btn-google {
+  background-color: #4285f4 !important;
+  color: white !important;
+}
+.btn-google:hover {
+  background-color: #357ae8 !important;
+  border: none;
+}
+.btn-inverted {
+  background-color: white !important;
+  color: black !important;
+  border: 1px solid black !important;
+}
+
+.btn-inverted:hover {
+  background-color: black !important;
+  color: white !important;
+}
+.error {
+  text-transform: capitalize;
+  padding: 1em;
+  background: pink;
+  color: rgb(104, 17, 17);
+}
+.center {
+  margin: 0 auto;
+}
+.text-center {
+  text-align: center;
+}
+.sign-out-link {
+  padding: 0.5em;
+  cursor: pointer;
+  border: 1px solid rgb(160, 13, 38);
+  color: rgb(160, 13, 38);
+  border-radius: 5px;
+}
+.sign-out-link:hover {
+  background-color: rgb(160, 13, 38);
+  color: white;
+}
+.page-indicatior {
+  color: black;
+}
+body {
+  font-family: "Roboto", sans-serif;
+
+  padding: 0 2em;
+  color: gray;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(1turn);
+  }
+}
+@media (max-width: 500px) {
+  body {
+    font-size: 0.9rem;
+    padding: 0.5em;
+  }
+  .card {
+    flex-basis: 250px !important;
+  }
+  .navbar {
+    display: flex;
+    justify-content: none;
+  }
+  .btn {
+    font-size: 0.8rem;
+  }
+  .shop-card {
+    flex-basis: 175px !important;
+  }
+  .cart-logo::before {
+    bottom: 45% !important;
+  }
+  .shop-image:hover > button,
+  .shop-image:active > button {
+    bottom: 50% !important;
+    aspect-ratio: 8;
+  }
+}
