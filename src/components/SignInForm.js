@@ -101,7 +101,6 @@ export default function SignInForm() {
             <button type="submit" className="btn">
               sign in
             </button>
-
             <button
               type="button"
               className="btn btn-google"
@@ -111,6 +110,7 @@ export default function SignInForm() {
             </button>
           </div>
         </form>
+
         {isLoading && <Loader />}
       </section>
     </>
