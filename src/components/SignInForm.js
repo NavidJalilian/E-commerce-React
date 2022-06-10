@@ -55,7 +55,7 @@ export default function SignInForm() {
   return (
     <>
       <section className="formContainer">
-        <span>Sign Up With Email And Password</span>
+        <span>Sign In With Email And Password</span>
         <form action="" onSubmit={handleSubmit}>
           <div
             className={isEmailvalid ? "" : "error-notif"}
@@ -102,6 +102,7 @@ export default function SignInForm() {
               sign in
             </button>
             <button
+              target="blank"
               type="button"
               className="btn btn-google"
               onClick={signInWithGoogle}
