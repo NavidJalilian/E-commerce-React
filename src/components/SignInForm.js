@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
 import "./SignUpForm.css";
 import FormInput from "./FormInput";
 import { Link } from "react-router-dom";
@@ -20,8 +20,6 @@ export default function SignInForm() {
   const [isLoading, setIsLoading] = useState(false);
   const [isPassowrdValid, setIsPasswordValid] = useState(true);
   const [isEmailvalid, setIsEmailValid] = useState(true);
-  const inputFoucsRef = useRef();
-  if (inputFoucsRef.current) console.log("is on");
 
   const signInWithGoogle = async () => {
     const { user } = await signInWithGooglePopup();
@@ -64,7 +62,6 @@ export default function SignInForm() {
             data-error="User Not Found !"
           >
             <FormInput
-             
               type="email"
               id="email"
               placeholder=" "
