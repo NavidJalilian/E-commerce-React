@@ -47,8 +47,7 @@
 .input:valid {
   background-color: aqua;
 }
-.input {
-}
+
 .error-notif::after {
   position: relative;
   position: absolute;
