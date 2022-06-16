@@ -137,9 +137,5 @@ body {
   .cart-logo::before {
     bottom: 45% !important;
   }
-  .shop-image:hover > button,
-  .shop-image:active > button {
-    bottom: 50% !important;
-    aspect-ratio: 8;
-  }
+
 }
