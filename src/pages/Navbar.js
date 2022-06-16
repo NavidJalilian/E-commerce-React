@@ -23,7 +23,7 @@ export default function Navbar() {
         <ul>
           <li>
             {!currentUser ? (
-              <Link to="Auth">sign in</Link>
+              <Link className="sign-in-link" to="Auth">sign in</Link>
             ) : (
               <span className="sign-out-link" onClick={signOutUser}>
                 Sign out

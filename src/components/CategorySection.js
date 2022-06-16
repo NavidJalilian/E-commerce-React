@@ -15,10 +15,10 @@ export default function CategorySection({ product }) {
   };
 
   useEffect(() => {
-    const timer = setTimeout(() => setIsAddedToCart(false), 1000);
+    const timer = setTimeout(() => setIsAddedToCart(false), 2000);
     return () => clearTimeout(timer);
   });
-  
+
   const notifCssClass = isAddedToCart && "noift-tab-navbar";
 
   return (
@@ -29,8 +29,8 @@ export default function CategorySection({ product }) {
           add to cart
         </button>
         <div className={"success-tab " + notifCssClass}>
+          <span className="shop-success-title ">added to cart</span>
           <span className="success-tab-check">&#10004;</span>
-          <span className="shop-success-title ">Product added to cart</span>
         </div>
       </div>
       <div className="shop-card-content">
