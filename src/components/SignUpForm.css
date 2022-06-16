@@ -29,6 +29,7 @@
   transform: translateY(-50%);
   pointer-events: none;
   border-radius: 5px;
+  transition: all 0.3s ease;
 }
 .input:focus + .label,
 .input:not(:placeholder-shown) + .label {
@@ -38,8 +39,6 @@
   padding: 0.2em;
   color: #000;
   background-color: white;
-
-  transition: all 0.2s ease-in-out;
 }
 .input:focus {
   background-size: 100% 2px, 100%;
@@ -61,7 +60,6 @@
   font-size: 0.7em;
   padding: 0.3em 0.7em;
 }
-
 
 /* loader */
 .lds-ellipsis {
