@@ -36,12 +36,10 @@ const homeViewData = [
 ];
 
 export default function Home() {
-  
   return (
     <>
       <div className="home">
-        {}
-        {homeViewData.map(({ id, title, imageUrl,route }) => (
+        {homeViewData.map(({ id, title, imageUrl, route }) => (
           <Card url={imageUrl} title={title} key={id} route={route} />
         ))}
       </div>
