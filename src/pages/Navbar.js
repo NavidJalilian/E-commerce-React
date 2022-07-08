@@ -7,9 +7,11 @@ import { UserContext } from "../contexts/UserContext";
 import { signOutUser } from "../utils/firebase";
 import Cart from "../components/Cart";
 import { CartContext } from "../contexts/cartContext";
+import { useSelector } from "react-redux";
 
 export default function Navbar() {
-  const { currentUser } = useContext(UserContext);
+  const currentUser = useSelector((state) => state.user);
+
   const { isCartOpen, setIsCartOpen, cartItemsCount } = useContext(CartContext);
 
   return (
@@ -23,7 +25,9 @@ export default function Navbar() {
         <ul>
           <li>
             {!currentUser ? (
-              <Link className="sign-in-link" to="Auth">sign in</Link>
+              <Link className="sign-in-link" to="Auth">
+                sign in
+              </Link>
             ) : (
               <span className="sign-out-link" onClick={signOutUser}>
                 Sign out
