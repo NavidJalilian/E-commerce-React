@@ -3,7 +3,6 @@ import "./Navbar.css";
 import cart from "../images/cart.png";
 import { Link, Outlet } from "react-router-dom";
 import { useContext } from "react";
-import { UserContext } from "../contexts/UserContext";
 import { signOutUser } from "../utils/firebase";
 import Cart from "../components/Cart";
 import { CartContext } from "../contexts/cartContext";

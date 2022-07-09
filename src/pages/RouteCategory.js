@@ -1,15 +1,15 @@
-import { useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import CategorySection from "../components/CategorySection";
 import SkeletonLoading from "../components/SkeletonLoading";
-import { CategoriesContext } from "../contexts/categoriesContext";
+import { useSelector } from "react-redux/es/exports";
 import "./RouteCategory.css";
 
 export default function RouteCategory() {
   const { category } = useParams();
-  const { categoriesMap, isLoading } = useContext(CategoriesContext);
+  const isLoading = useSelector((state) => state.categories.isLoading);
+  const categoriesMap = useSelector((state) => state.categories.categoriesMap);
   const [products, setProducts] = useState(categoriesMap[category]);
-
   useEffect(() => {
     setProducts(categoriesMap[category]);
   }, [categoriesMap, category]);

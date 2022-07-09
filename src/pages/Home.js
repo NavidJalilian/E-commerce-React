@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Card from "../components/Card";
 import "./Home.css";
+
 
 const homeViewData = [
   {
@@ -36,6 +37,8 @@ const homeViewData = [
 ];
 
 export default function Home() {
+ 
+
   return (
     <>
       <div className="home">
