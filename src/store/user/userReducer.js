@@ -1,6 +1,4 @@
-export const USER_ACTION_TYPES = {
-  SET_CURRENT_USER: "SET_CURRENT-USER",
-};
+
 const INITIAL_STATE = {
   currentUser: null,
 };
