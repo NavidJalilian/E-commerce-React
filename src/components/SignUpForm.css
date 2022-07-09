@@ -11,7 +11,9 @@
   margin: 1em 0;
 }
 .formContainer > span {
+  color: rgb(49, 47, 47);
   text-transform: capitalize;
+  font-size: larger;
 }
 .input {
   padding: 0.5em;

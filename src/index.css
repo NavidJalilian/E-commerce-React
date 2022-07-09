@@ -39,6 +39,11 @@ button {
   border: none;
   outline: none;
 }
+button,
+label,
+input {
+  font-family: inherit;
+}
 .btn {
   height: 50px;
   letter-spacing: 0.5px;
