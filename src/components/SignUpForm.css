@@ -1,6 +1,7 @@
 .formContainer {
   margin: 0 auto;
   max-width: 500px;
+  padding: 1em;
 }
 .formContainer > form {
   padding: 1em;

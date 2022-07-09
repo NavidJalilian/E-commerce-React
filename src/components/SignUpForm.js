@@ -59,7 +59,7 @@ export default function SignUpForm() {
 
   return (
     <>
-      <section className="formContainer ">
+      <section className="formContainer box-shadow ">
         <span className="">Sign Up With Email And Password</span>
         <form action="" onSubmit={handleSubmit}>
           <div

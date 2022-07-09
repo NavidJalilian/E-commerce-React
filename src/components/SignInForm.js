@@ -54,7 +54,7 @@ export default function SignInForm() {
 
   return (
     <>
-      <section className="formContainer">
+      <section className="formContainer box-shadow">
         <span>Sign In With Email And Password</span>
         <form action="" onSubmit={handleSubmit}>
           <div

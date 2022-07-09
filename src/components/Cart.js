@@ -13,7 +13,7 @@ export default function Cart() {
 
   return (
     <div className="">
-      <div className="bag">
+      <div className="bag box-shadow">
         <div className="bag-items">
           {cartItems.map(({ name, quantity, id, imageUrl, price }) => (
             <div className="bag-item" key={id} onLoad={scrollToBuyBtn}>

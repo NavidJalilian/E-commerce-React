@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import "./CheckOut.css";
 import { CartContext } from "../contexts/cartContext";
-
+import emptyCartImg from "../images/empty-cart.jpg";
 export default function CheckOut() {
   const {
     cartItems,
@@ -12,19 +12,24 @@ export default function CheckOut() {
   } = useContext(CartContext);
   return (
     <>
-      <div className="checkOut">
-        <ul className="grid grid-col-5">
-          <li>product</li>
-          <li>description</li>
-          <li>price</li>
-          <li>quantity</li>
-          <li>remove</li>
-        </ul>
-        <div className="checkOut-items">
+      <div className="checkOut ">
+        {cartItems.length !== 0 && (
+          <ul className="grid grid-col-5 box-shadow">
+            <li>product</li>
+            <li>description</li>
+            <li>price</li>
+            <li>quantity</li>
+            <li>remove</li>
+          </ul>
+        )}
+        <div className="checkOut-items ">
           {cartItems.map((item) => {
             const { id, name, imageUrl, price, quantity } = item;
             return (
-              <div className="checkOut-item grid grid-col-5" key={id}>
+              <div
+                className="checkOut-item grid grid-col-5 box-shadow"
+                key={id}
+              >
                 <img src={imageUrl} alt={name} />
                 <p>{name}</p>
                 <span className="quantity">{price}$</span>
@@ -57,8 +62,20 @@ export default function CheckOut() {
             );
           })}
         </div>
-        <hr />
-        <span className="checkOut-total">Total : {totalPayment}$</span>
+
+        {cartItems.length === 0 ? (
+          <div className="empty-cart">
+            <p>ops your cart is empty !</p>
+            <img src={emptyCartImg} alt="" srcset="" />
+          </div>
+        ) : (
+          <div className="checkOut-total ">
+            <span>
+              Your total is : <strong> {totalPayment}$</strong>
+            </span>
+            <button className="btn">payment gateway</button>
+          </div>
+        )}
       </div>
     </>
   );

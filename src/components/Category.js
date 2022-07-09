@@ -4,13 +4,13 @@ import CategorySection from "./CategorySection";
 export default function Category({ title, item }) {
   return (
     <>
-      <h2 href="">
+      <span className="section-title" href="">
         <Link to={"/Shop/" + title}>
-          <span className="section-title">{title}</span>
+          <span>{title}</span>
         </Link>{" "}
-      </h2>
+      </span>
 
-      <div className="shop gallery">
+      <div className="shop gallery box-shadow">
         {item
           .filter((_, idx) => idx < 4)
           .map((product) => (

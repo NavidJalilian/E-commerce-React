@@ -6,6 +6,9 @@
   margin: 0;
   scroll-behavior: smooth;
 }
+:root {
+  --black-primary: rgb(32, 32, 32);
+}
 
 a {
   text-decoration: none;
@@ -45,24 +48,23 @@ input {
   font-family: inherit;
 }
 .btn {
-  height: 50px;
   letter-spacing: 0.5px;
-  line-height: 50px;
-  padding: 0 1em 0;
+  padding: 1.1em 1em;
   font-size: 1rem;
-  background-color: black;
+  background-color: var(--black-primary);
   color: white;
   text-transform: capitalize;
   font-family: inherit;
   font-weight: bolder;
   border: none;
   cursor: pointer;
-  aspect-ratio: 3;
+  aspect-ratio: 4/1;
+  border-radius: 5px;
 }
 .btn:hover {
   background-color: white;
   color: black;
-  outline: 1px solid black;
+  outline: 1px solid var(--black-primary);
 }
 
 .btn-google {
@@ -76,7 +78,7 @@ input {
 .btn-inverted {
   background-color: white !important;
   color: black !important;
-  border: 1px solid black !important;
+  border: 1px solid var(--black-primary) !important;
 }
 
 .btn-inverted:hover {
@@ -92,6 +94,11 @@ input {
 .center {
   margin: 0 auto;
 }
+.box-shadow {
+  padding: 0.4em;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 7px;
+}
 .text-center {
   text-align: center;
 }
@@ -102,17 +109,18 @@ input {
   color: rgb(160, 13, 38);
   border-radius: 5px;
 }
+
 .sign-out-link:hover {
   background-color: rgb(160, 13, 38);
   color: white;
 }
 .page-indicatior {
-  color: black;
+  color: rgb(49, 47, 47);
 }
 body {
   font-family: "Roboto", sans-serif;
 
-  padding: 0 2em;
+  padding: 1em 2em;
   color: gray;
 }
 
@@ -141,10 +149,5 @@ body {
   }
   .cart-logo::before {
     bottom: 45% !important;
-  }
-  .shop-image:hover > button,
-  .shop-image:active > button {
-    bottom: 50% !important;
-    aspect-ratio: 8;
   }
 }

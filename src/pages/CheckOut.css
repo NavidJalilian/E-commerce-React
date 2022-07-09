@@ -14,7 +14,7 @@
   text-transform: capitalize;
   place-items: center;
   font-size: 0.85em;
-  outline: 1px solid rgb(190, 190, 190);
+
   padding: 1em 0.5em;
 }
 .checkOut-item > img {
@@ -49,9 +49,23 @@
   font-weight: bold;
 }
 .checkOut-total {
-  display: block;
   color: rgb(31, 30, 30);
   margin: 3em 1em;
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.checkOut-total > button {
+}
+
+.empty-cart {
+  text-transform: capitalize;
+  color: rgb(204, 54, 79);
+  text-align: center;
+  margin: auto;
+  margin-top: 1em;
+  max-width: 450px;
 }
 .checkOut-item .cross-icon {
   color: rgb(221, 62, 62);

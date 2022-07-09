@@ -1,10 +1,11 @@
 .card {
-  border: 1px solid black;
+  border: 1px solid var(--black-primary);
   text-align: center;
   position: relative;
   cursor: pointer;
   overflow: hidden;
   flex: 1 0 400px;
+  border-radius: 8px;
 }
 .card > img {
   object-fit: cover;
