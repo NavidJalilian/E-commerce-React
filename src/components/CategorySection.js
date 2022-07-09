@@ -15,7 +15,7 @@ export default function CategorySection({ product }) {
   };
 
   useEffect(() => {
-    const timer = setTimeout(() => setIsAddedToCart(false), 1000);
+    const timer = setTimeout(() => setIsAddedToCart(false), 1500);
     return () => clearTimeout(timer);
   });
   
