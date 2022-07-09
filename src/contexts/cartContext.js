@@ -11,8 +11,6 @@ export const CartContext = createContext({
   totalPayment: 0,
 });
 
-
-
 const removeItem = (cartItems, productToRemove) =>
   cartItems.filter((cartItem) => cartItem.id !== productToRemove.id);
 

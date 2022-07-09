@@ -39,11 +39,6 @@ button {
   border: none;
   outline: none;
 }
-button,
-label,
-input {
-  font-family: inherit;
-}
 .btn {
   height: 50px;
   letter-spacing: 0.5px;
@@ -106,7 +101,6 @@ input {
   background-color: rgb(160, 13, 38);
   color: white;
 }
-
 .page-indicatior {
   color: black;
 }
@@ -142,5 +136,10 @@ body {
   }
   .cart-logo::before {
     bottom: 45% !important;
+  }
+  .shop-image:hover > button,
+  .shop-image:active > button {
+    bottom: 50% !important;
+    aspect-ratio: 8;
   }
 }
