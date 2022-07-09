@@ -10,7 +10,7 @@ import { CartContext } from "../contexts/cartContext";
 import { useSelector } from "react-redux";
 
 export default function Navbar() {
-  const currentUser = useSelector((state) => state.user);
+  const currentUser = useSelector((state) => state.user.currentUser);
 
   const { isCartOpen, setIsCartOpen, cartItemsCount } = useContext(CartContext);
 
